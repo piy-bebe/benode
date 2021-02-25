@@ -20,5 +20,5 @@ app.get('/about', (req, res) => {
   res.render('about')
 })
 app.listen(PORT, () => {
-  console.log(`[eroir] Server has been started on port ${PORT}...`)
+  console.log(`[matvey] Server has been started on port ${PORT}...`)
 })
