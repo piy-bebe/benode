@@ -1,5 +1,0 @@
-# BENODE
-
-start git
-
-# Fsd
