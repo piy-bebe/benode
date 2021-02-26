@@ -1,0 +1,23 @@
+<nav>
+   <div class="nav-wrapper">
+   <a href="#" class="brand-logo">courses APP</a>
+   <ul id="nav-mobile" class="right hide-on-med-and-down">
+      {{#if isHome}}
+      <li class="active"><a href="/">main</a></li>
+      {{else}}
+      <li><a href="/">main</a></li>
+      {{/if}}
+      {{#if isCourses}}
+      <li class="active"><a href="/courses">courses</a></li>
+      {{else}}
+      <li><a href="/courses">courses</a></li>
+      {{/if}}
+      {{#if isAdd}}
+      <li class="active"><a href="/add">add courses</a></li>
+      {{else}}
+      <li><a href="/add">add courses</a></li>
+      {{/if}}
+
+   </ul>
+   </div>
+</nav>
