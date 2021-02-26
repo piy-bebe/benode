@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 
-router.get("/courses", (req, res) => {
+router.get("/", (req, res) => {
   res.render("courses", {
     title: "Courses",
     isCourses: true,
