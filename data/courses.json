@@ -1,1 +1,14 @@
-[{"title":"Привет","price":"228","image":"322","id":"6b3507cd-7878-4665-8cc6-cac9299d6549"},{"title":"Привет","price":"228","image":"322","id":"049496ec-1ba6-4dc9-ac3d-4ba2d49eb414"},{"title":"React JS","price":"2000","image":"https://hypeava.ru/uploads/posts/2020-10/1602273595_7.jpg","id":"52ba1801-b8b8-4945-947d-c071a8784c95"}]
+[
+  {
+    "title": "React JS",
+    "price": "2000",
+    "image": "https://images.ua.prom.st/2741427687_w600_h600_2741427687.jpg",
+    "id": "52ba1801-b8b8-4945-947d-c071a8784c95"
+  },
+  {
+    "title": "Vue JS",
+    "price": "1500",
+    "image": "https://images.ua.prom.st/2741427690_w600_h600_2741427690.jpg",
+    "id": "70c7f3dd-af52-4cd4-b3d9-59821c638fd8"
+  }
+]
