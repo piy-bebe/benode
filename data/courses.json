@@ -1,14 +1,1 @@
-[
-  {
-    "title": "React JS",
-    "price": "2000",
-    "image": "https://images.ua.prom.st/2741427687_w600_h600_2741427687.jpg",
-    "id": "52ba1801-b8b8-4945-947d-c071a8784c95"
-  },
-  {
-    "title": "Vue JS",
-    "price": "1500",
-    "image": "https://images.ua.prom.st/2741427690_w600_h600_2741427690.jpg",
-    "id": "70c7f3dd-af52-4cd4-b3d9-59821c638fd8"
-  }
-]
+[{"title":"React JS","price":"2000","image":"https://images.ua.prom.st/2741427687_w600_h600_2741427687.jpg","id":"52ba1801-b8b8-4945-947d-c071a8784c95"},{"title":"Vue JS","price":"228","image":"https://images.ua.prom.st/2741427690_w600_h600_2741427690.jpg","id":"70c7f3dd-af52-4cd4-b3d9-59821c638fd8"}]
