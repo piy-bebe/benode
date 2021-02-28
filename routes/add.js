@@ -13,6 +13,7 @@ router.post('/', (req, res) => {
   const course = new Course(req.body.title, req.body.price, req.body.image)
   course.save()
   res.redirect('/courses')
+  console.log('123456')
 })
 
 module.exports = router
