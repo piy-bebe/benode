@@ -5,13 +5,17 @@
   font-size: 24px;
 }
 .card {
-
 }
 .card > .card-image {
   margin: auto;
-  height: 400px;
+  height: 220px;
   display: flex;
 }
 .img-n {
   height: 300px;
+}
+.card-action.actions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
