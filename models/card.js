@@ -3,3 +3,5 @@ class Card {
 
   fetch() {}
 }
+
+module.exports = Card
