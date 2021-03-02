@@ -11,6 +11,10 @@ const routerCard = require("./routes/card");
 const hbs = exphbs.create({
   defaultLayout: "main",
   extname: "hbs",
+  runtimeOptions: {
+    allowProtoPropertiesByDefault: true,
+    allowProtoMethodsByDefault: true
+  }
 });
 
 app.use(express.static("public"));
