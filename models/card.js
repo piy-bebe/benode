@@ -38,6 +38,14 @@ class Card {
   static async remove(id) {
     const card = Card.fetch()
     const idx = card.courses.findIndex((c) => c.id === id)
+    const course = card.courses[idx]
+    if (course.cout === 1) {
+      card.courses = card.courses.filter((c) => c.id !== id)
+    } else {
+      card.courses[idx].count--
+    }
+
+    card.price -= course.price
   }
   static async fetch() {
     return new Promise((resolve, reject) => {
