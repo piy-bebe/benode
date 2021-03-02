@@ -29,7 +29,7 @@ const password = "12345";
 
 async function start() {
   try {
-    const url = `mongodb+srv://piybebe:${password}@cluster0.yriz1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+    const url = `mongodb+srv://piybebe:${password}@cluster0.yriz1.mongodb.net/shop`;
     await mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
     app.listen(PORT, () => {
       console.log(`Server has been started on port ${PORT}...`);
