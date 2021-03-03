@@ -3,6 +3,7 @@
 {{#if courses.length}}
   <table>
     <thead>
+        <td>{{count}}</td>
       <tr>
         <th>Название</th>
         <th>Количество</th>
@@ -14,7 +15,6 @@
       {{#each courses}}
       <tr>
         <td>{{title}}</td>
-        <td>{{count}}</td>
         <td>
           <button class="btn btn-small js-remove" data-id="{{id}}">Удалить</button>
         </td>
