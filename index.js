@@ -17,7 +17,15 @@ const hbs = exphbs.create({
     allowProtoMethodsByDefault: true,
   },
 })
-
+app.use(async (req, res, next) => {
+  try {
+    const user = await User.findById('60408ed3c25a6c112cf1a27b')
+    req.user = user
+    next()
+  } catch (e) {
+    console.log(e)
+  }
+})
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: false }))
 app.engine('hbs', hbs.engine)
