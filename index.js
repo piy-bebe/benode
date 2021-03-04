@@ -7,6 +7,7 @@ const routerHome = require('./routes/home')
 const routerAdd = require('./routes/add')
 const routerCard = require('./routes/card')
 
+const User = require('./models/user')
 const app = express()
 const hbs = exphbs.create({
   defaultLayout: 'main',
@@ -39,6 +40,16 @@ async function start() {
       useUnifiedTopology: true,
       useFindAndModify: false,
     })
+    const candidate = await User.findOne()
+    if (!candidate) {
+      const user = new User({
+        email: 'bebeA@gmail.com',
+        name: 'piybebe',
+        cart: { items: [] },
+      })
+
+      user.save()
+    }
     app.listen(PORT, () => {
       console.log(`Server has been started on port ${PORT}...`)
     })
