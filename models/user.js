@@ -27,4 +27,8 @@ const userSchema = new Schema({
   },
 })
 
+userSchema.method.addToCart = function (course) {
+  // const items = [...this.cart.items]
+}
+
 module.exports = model('User', userSchema)
