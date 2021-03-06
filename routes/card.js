@@ -12,13 +12,14 @@ router.delete('/remove/:id', async (req, res) => {
   res.status(200).json(card)
 })
 router.get('/', async (req, res) => {
-  const card = await Card.fetch()
-  res.render('card', {
-    title: 'Корзина',
-    isCard: true,
-    courses: card.courses,
-    price: card.price,
-  })
+  // const card = await Card.fetch()
+  // res.render('card', {
+  //   title: 'Корзина',
+  //   isCard: true,
+  //   courses: card.courses,
+  //   price: card.price,
+  // })
+  res.json({test: true})
 })
 
 module.exports = router
