@@ -19,7 +19,7 @@ const hbs = exphbs.create({
 })
 app.use(async (req, res, next) => {
   try {
-    const user = await User.findById('60408ed3c25a6c112cf1a27b')
+    const user = await User.findById('6044c2ca4c9e4b31fce47261')
     req.user = user
     next()
   } catch (e) {
