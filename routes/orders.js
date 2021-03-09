@@ -1,12 +1,28 @@
 const { Router } = require('express')
+const orders = require('../models/orders')
 const router = Router()
 const Order = require('../models/orders')
 
 router.get('/', async (req, res) => {
-  res.render('orders', {
-    title: 'Orders',
-    isOrders: true,
-  })
+  try {
+    const orders = await Order.find({
+      'user.userId': req.user._id,
+    }).populate('user.userId')
+
+    console.log(order)
+    res.render('orders', {
+      title: 'Orders',
+      isOrders: true,
+      orders: orders.map((o) => ({
+        ...o,
+        price: o.courses.reduce((total, i) => {
+          return (total += i.course.price * i.count)
+        }, 0),
+      })),
+    })
+  } catch (e) {
+    console.log(e)
+  }
 })
 
 router.post('/', async (req, res) => {
@@ -16,9 +32,6 @@ router.post('/', async (req, res) => {
       count: c.count,
       course: c.courseId,
     }))
-
-    console.log(courses)
-
     const order = new Order({
       user: {
         name: req.user.name,
@@ -29,6 +42,7 @@ router.post('/', async (req, res) => {
 
     await order.save()
     await req.user.clearCart()
+
     res.redirect('orders')
   } catch (e) {
     console.log(e)
