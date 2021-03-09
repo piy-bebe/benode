@@ -4,9 +4,9 @@
   <table>
     <thead>
       <tr>
-        <th>Название</th>
-        <th>Количество</th>
-        <th>Действия</th>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -15,14 +15,17 @@
         <td>{{title}}</td>
         <td>{{count}}</td>
         <td>
-          <button class="btn btn-small js-remove" data-id="{{_id}}">Удалить</button>
+          <button class="btn btn-small js-remove" data-id="{{_id}}">Delete</button>
         </td>
       </tr>
       {{/each}}
     </tbody>
   </table>
-  <p><strong>Цена: </strong> <span class="price">{{price}}</span></p>
+  <p><strong>cost: </strong> <span class="price">{{price}}</span></p>
 {{else}}
-<p>Корзина пуста</p>
+<p>Cart is empty</p>
 {{/if}}
+<form action="/orders" method="POST">
+  <button type="submit" class="btn">Order</button>
+</form>
 </div>
