@@ -9,11 +9,12 @@
                <span class="card-title">
                   Заказ <small>{{_id}}</small>
                </span>
-               <p>Дата {{date}}</p>
-               <p>Количество: {{courses.count}}</p>
-               <p>{{user.name}} ({{user.userId.email}})</p>
+               <p>Дата: <span class="date">{{date}}</span></p>
+               <p><em>{{user.name}}</em> ({{user.userId.email}})</p>
                <ol>
-
+                  {{#each courses}}
+                     <li>{{course.title}} ( x <strong>{{count}}</strong> )</li>
+                  {{/each}}
                </ol>
                <hr>
                <p>Цена: <span class="price">{{#each courses}}{{course.price}}{{/each}}</span></p>
