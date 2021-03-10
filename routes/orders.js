@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
       'user.userId': req.user._id,
     }).populate('user.userId')
 
-    console.log(order)
+    console.log('*******\n', ...orders)
     res.render('orders', {
       title: 'Orders',
       isOrders: true,
