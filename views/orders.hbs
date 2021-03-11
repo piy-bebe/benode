@@ -17,7 +17,11 @@
                   {{/each}}
                </ol>
                <hr>
-               <p>Цена: <span class="price">{{#each courses}}{{course.price}}{{/each}}</span></p>
+               <p>Цена: <span class="price">{{price}}</span></p>
+               <form action="/orders/remove" method="POST">
+               <input type="hidden" name="id" value="{{_id}}">
+                  <button class="btn" type="submit">Delete</button>
+               </form>
             </div>
          </div>
       </div>

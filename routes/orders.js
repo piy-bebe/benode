@@ -7,10 +7,20 @@ router.get('/', async (req, res) => {
     const orders = await Order.find({
       'user.userId': req.user._id,
     }).populate('user.userId')
+    const a = orders.map((o) => {
+      return {
+        ...o._doc,
+        price: o.courses.reduce((total, c) => {
+          return (total += c.count * c.course.price)
+        }, 0),
+      }
+    })
+    console.log(a)
     res.render('orders', {
       title: 'Orders',
       isOrders: true,
-      orders: orders,
+      orders: a,
+      // price,
     })
   } catch (e) {
     console.log(e)
@@ -42,4 +52,14 @@ router.post('/', async (req, res) => {
   }
 })
 
+router.post('/remove', async (req, res) => {
+  try {
+    await Order.deleteOne({
+      _id: req.body.id,
+    })
+    res.redirect('/orders')
+  } catch (e) {
+    console.log(e)
+  }
+})
 module.exports = router
