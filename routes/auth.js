@@ -1,8 +1,8 @@
 const { Router } = require('express')
 const router = Router()
 
-router.get('/', async (req, res) => {
-  res.render('login')
+router.get('/login', async (req, res) => {
+  res.render('auth/login')
 })
 
 module.exports = router

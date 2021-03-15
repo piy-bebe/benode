@@ -7,6 +7,7 @@ const routerHome = require('./routes/home')
 const routerAdd = require('./routes/add')
 const routerCard = require('./routes/card')
 const routerOrders = require('./routes/orders')
+const routerLogin = require('./routes/auth')
 
 const User = require('./models/user')
 const app = express()
@@ -38,6 +39,7 @@ app.use('/courses', routerCourses)
 app.use('/add', routerAdd)
 app.use('/card', routerCard)
 app.use('/orders', routerOrders)
+app.use('/auth', routerLogin)
 
 const PORT = process.env.PORT || 3000
 const password = '12345'
