@@ -19,8 +19,7 @@ router.get('/', async (req, res) => {
     res.render('orders', {
       title: 'Orders',
       isOrders: true,
-      orders: a,
-      // price,
+      orders: a
     })
   } catch (e) {
     console.log(e)
